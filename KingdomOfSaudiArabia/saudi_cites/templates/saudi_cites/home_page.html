@@ -35,11 +35,11 @@ body, html {
     <!-- Navbar (sit on top) -->
     <div>
       <nav class="navbar" style="background-color: #020e16;">
-        <a href="home_page.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:initial;"  >Home</a>
-        <a href="riyadh.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Riyadh City</a>
-        <a href="tabuk.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Tabuk City</a>
-        <a href="alaula.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Alaula</a>
-        <a href="aldhahran.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;">Aldhahran City</a>  </nav>
+        <a href="{% url 'saudi_cites:home_page' %}" class="w3-bar-item w3-button" style="color: aliceblue; font-style:initial;"  >Home</a>
+        <a href=" {% url 'saudi_cites:riyadh' %} " class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Riyadh City</a>
+        <a href=" {% url 'saudi_cites:tabuk' %} " class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Tabuk City</a>
+        <a href="{% url 'saudi_cites:alaula' %}  " class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Alaula</a>
+        <a href="{% url 'saudi_cites:aldhahran' %} " class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;">Aldhahran City</a>  </nav>
     </div>
 
 
