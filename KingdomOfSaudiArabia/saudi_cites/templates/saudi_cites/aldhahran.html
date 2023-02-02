@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> {% block title %} Aldharan City {% endblock %} </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+  height: 100%;
+  line-height: 1.8;}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/KingdomOfSaudiArabia/saudi_cites/static/images/aldhahran.jpg");
+  min-height: 100%; }
+.w3-bar .w3-button {padding: 16px;}
+</style>
+</head>
+
+
+
+<body>
+      <div id="content" name="content">
+        
+    
+    <!-- Navbar (sit on top) -->
+    <div>
+      <nav class="navbar" style="background-color: #251b4e;">
+        <a href="home_page.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:initial;"  >Home</a>
+        <a href="riyadh.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Riyadh City</a>
+        <a href="tabuk.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Tabuk City</a>
+        <a href="alaula.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Alaula</a>
+        <a href="aldhahran.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;">Aldhahran City</a>  </nav>
+    </div>
+
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <div class="w3-jumbo w3-hide-small w3-center" style="margin:auto;" >Welcome to Aldharan City </div><br>
+        <div class="animate__animated animate__fadeInTopRight" style="background-color: #251b4e;"  >modren life to live </div>
+      </div> 
+    </header>
+
+
+
+
+    <!-- About Section -->
+
+    <div class="w3-container"  style="background-color: #251b4e;" id="info">
+      
+      <h3 class="w3-center" style="color: aliceblue; font-style:initial;">About Aldharan City</h3>
+      <p class="w3-center w3-large" style="color: aliceblue; font-style:initial;">Activites</p>
+
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+          <p class="w3-large" style="color: aliceblue; font-style:initial;">The King Abdulaziz Center </p>
+          <p style="color: aliceblue; font-style:initial;" >
+            The King Abdulaziz Center for World Culture or Ithra is a cultural center owned by Saudi Aramco, and it is located on the same site where the well of goodness, the first oil spring in the Kingdom of Saudi Arabia, was discovered in Dhahran. The design of the King Abdulaziz Center for World Culture comes in the form of a group of compact stones that include Among its flanks is a modern library, a center for innovation, an oasis for youngsters that is the first museum of its kind for children in the Arab world, a museum of natural history, art galleries, an archive center, and in its midst the knowledge tower that offers educational programs for pioneers of all ages. In 2018 it was chosen by the American magazine "Time" as one of the 100 greatest places in the world.        
+          </p>
+        </div>
+
+        <div class="w3-quarter">
+          <p class="w3-large"style="color: aliceblue; font-style:initial;" >Energy Gallery</p>
+          <p style="color: aliceblue; font-style:initial;"> 
+            A list of tourist places in Dhahran is not complete without going through the details of visiting the Energy Exhibition Museum, which was dedicated to clarifying the details of the history of the oil and gas industry, in addition to presenting the technologies used in its extraction and production, all in conjunction with the opening of a library, an auditorium, and a 3D theater to explain the wonders of energy-related science.        </p>
+        </div>
+
+      </div>
+    </div>
+
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+</body>
+</html>

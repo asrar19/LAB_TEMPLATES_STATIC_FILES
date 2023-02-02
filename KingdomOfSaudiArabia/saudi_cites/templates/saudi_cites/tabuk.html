@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> {% block title %} Tabuk City {% endblock %} </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+  height: 100%;
+  line-height: 1.8;}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/KingdomOfSaudiArabia/saudi_cites/static/images/tabuk_bc.jpg");
+  min-height: 100%; }
+.w3-bar .w3-button {padding: 16px;}
+</style>
+</head>
+
+
+
+<body>
+      <div id="content" name="content">
+        
+    
+    <!-- Navbar (sit on top) -->
+    <div>
+      <nav class="navbar" style="background-color: #24562b;">
+        <a href="home_page.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:initial;"  >Home</a>
+        <a href="riyadh.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Riyadh City</a>
+        <a href="tabuk.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Tabuk City</a>
+        <a href="alaula.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Alaula</a>
+        <a href="aldhahran.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;">Aldhahran City</a>  </nav>
+    </div>
+
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <div class="w3-jumbo w3-hide-small w3-center" style="margin:auto;" >Welcome to Tabuk City </div><br>
+        <div class="animate__animated animate__fadeInTopRight" style="background-color: #24562b;" >Live the Modern Life to its Fullest </div>
+      </div> 
+    </header>
+
+
+
+
+    <!-- About Section -->
+
+    <div class="w3-container"  style="background-color: #24562b;" id="info">
+      
+      <h3 class="w3-center" style="color: aliceblue; font-style:initial;">About Tabuk City</h3>
+      <p class="w3-center w3-large" style="color: aliceblue; font-style:initial;">Activites</p>
+
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+          <p class="w3-large" style="color: aliceblue; font-style:initial;">Oasis city of the north
+        </p>
+          <p style="color: aliceblue; font-style:initial;" >
+            A city in an oasis, Tabuk is the capital of the Tabuk Province. It is located in the northwest of the country near the Jordanian border and the Gulf of Aqaba. Tabuk is a rapidly growing industrial center and also houses Saudi Arabia’s largest airforce base. The city has a rich history and various artifacts and relics have been found in the city and its surrounding areas. It used to be a major station of the Hejaz railway that carried pilgrims from Damascus to Medina         </p>
+        </div>
+
+        <div class="w3-quarter">
+          <p class="w3-large"style="color: aliceblue; font-style:initial;" >Tabuk Castle</p>
+          <p style="color: aliceblue; font-style:initial;"> 
+            There are spectacular fortresses all around Tabuk, but this imposing castle in the center of town might be the oldest. It’s known to date from 1559, though some claim there was a fortress here as early as 3500 B.C. Inside its walls, two mosques are linked by courtyards, stairwells and watchtowers, and there’s a small museum detailing the history of the castle and the wider city           
+        </p>
+        </div>
+
+        <div class="w3-quarter">
+          <p class="w3-large" style="color: aliceblue; font-style:initial;">Al Disah Valley</p>
+          <p style="color: aliceblue; font-style:initial;">
+            At the crossroads of three valleys south of Tabuk, the wind-sculpted sandstone columns of Wadi Al Disah (Valley of the Palms) look like a mix between the Grand Canyon and Monument Valley in America.        </p>
+        </div>
+
+      </div>
+    </div>
+
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+</body>
+</html>

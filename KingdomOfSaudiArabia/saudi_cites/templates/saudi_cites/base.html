@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> {% block title %}Kingdom Of Saudi Arabia{% endblock %} </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+  height: 100%;
+  line-height: 1.8;}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/KingdomOfSaudiArabia/saudi_cites/static/images/backgroung.jpg");
+  min-height: 100%; }
+.w3-bar .w3-button {padding: 16px;}
+</style>
+</head>
+
+
+
+<body>
+      <div id="content" name="content">
+        
+    
+    <!-- Navbar (sit on top) -->
+    <div>
+      <nav class="navbar" style="background-color: #020e16;">
+        <a href="home_page.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:initial;"  >Home</a>
+        <a href="riyadh.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Riyadh City</a>
+        <a href="tabuk.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Tabuk City</a>
+        <a href="alaula.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Alaula</a>
+        <a href="aldhahran.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;">Aldhahran City</a>  </nav>
+    </div>
+
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <div class="w3-jumbo w3-hide-small w3-center" style="margin:auto;" >Welcom to Saudi Arabia </div><br>
+        <div class="animate__animated animate__fadeInTopRight" >This is your guide for tourism in the Kingdom of Saudi Arabia</div>
+        <p><div class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" style="text-decoration: double;"  p>Let's Have a look on This Great country</div></p>
+      </div> 
+    </header>
+
+
+
+
+    <!-- About Section -->
+      {% block content %}
+
+    <div class="w3-container"  style="background-color: #020e16;" id="info">
+      
+      <h3 class="w3-center" style="color: aliceblue; font-style:initial;">About Saudi Ararbia</h3>
+      <p class="w3-center w3-large" style="color: aliceblue; font-style:initial;">General information</p>
+
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+          <p class="w3-large" style="color: aliceblue; font-style:initial;">Saudi Space</p>
+          <p style="color: aliceblue; font-style:initial;" >Kingdom of Saudi Arabia is an Arab country, and it is the largest country in the Middle East by area, and it is located specifically in the southwest of the continent of Asia and constitutes the largest part of the Arabian Peninsula, with an area of ​​about two million square kilometers.</p>
+        </div>
+
+        <div class="w3-quarter">
+          <p class="w3-large"style="color: aliceblue; font-style:initial;" >Population</p>
+          <p style="color: aliceblue; font-style:initial;"> the current population of Saudi Arabia in 2023 is 36,947,025, a 1.48% increase from 2022. The population of Saudi Arabia in 2022 was 36,408,820, a 1.28% increase from 2021. </p>
+        </div>
+
+        <div class="w3-quarter">
+          <p class="w3-large" style="color: aliceblue; font-style:initial;">National Day</p>
+          <p style="color: aliceblue; font-style:initial;">It sets on the 1st day of Libra, on September 23rd of each year</p>
+        </div>
+
+      </div>
+    </div>
+  {% endblock %}
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
