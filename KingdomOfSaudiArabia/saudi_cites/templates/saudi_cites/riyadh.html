@@ -1,59 +1,18 @@
+{% extends 'saudi_cites/home_page.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-<title> {% block title %} Riyadh City {% endblock %} </title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+ 
 
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-body, html {
-  height: 100%;
-  line-height: 1.8;}
+{% block bg %}
+background-image: url("{% static 'images\riyadh_pictures\2.jpg' %}");
+{% endblock %}
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/KingdomOfSaudiArabia/saudi_cites/static/images/rr2.jpg");
-  min-height: 100%; }
-.w3-bar .w3-button {padding: 16px;}
-</style>
-</head>
-
-
-
-<body>
-      <div id="content" name="content">
-        
-    
-    <!-- Navbar (sit on top) -->
-    <div>
-      <nav class="navbar" style="background-color: #4e295b;">
-        <a href="home_page.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:initial;"  >Home</a>
-        <a href="riyadh.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Riyadh City</a>
-        <a href="tabuk.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Tabuk City</a>
-        <a href="alaula.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Alaula</a>
-        <a href="aldhahran.html" class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;">Aldhahran City</a>  </nav>
-    </div>
-
-
-    <!-- Header with full-height image -->
-    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <div class="w3-jumbo w3-hide-small w3-center" style="margin:auto;" >Welcome to Riyadh City </div><br>
-        <div class="animate__animated animate__fadeInTopRight" style="background-color: #4e295b; " >Live the Modern Life to its Fullest </div>
-      </div> 
-    </header>
-
-
-
-
+  
+  {% block Nav%} <nav class="navbar" style="background-color:  #4e295b; ">{% endblock %}
+  
+  
+{% block headrGreeting %} Welcome To Riyadh City  {% endblock %}
+{% block headrGreeting2 %} The Greates City in the World !! {% endblock %}
+{% block content %}
     <!-- About Section -->
 
     <div class="w3-container"  style="background-color: #4e295b;" id="info">
@@ -63,7 +22,7 @@ body, html {
 
       <div class="w3-row-padding  w3-center" style="margin-top:64px">
         <div class="w3-quarter">
-          <p class="w3-large" style="color: aliceblue; font-style:initial; align-items-center; ">Al Masmak Fortress</p>
+          <p class="w3-large" style="color: aliceblue; font-style:initial;">Al Masmak Fortress</p>
           <p style="color: aliceblue; font-style:initial;" >
             Standing at the gates of Al Masmak Fortress, you will witness the remains of an epic story of Al Riyadh conquest by King Abdul Aziz, may God have mercy on his soul. In your tour around the palace, you will be introduced to the traditional architecture of the city of Riyadh and back in time to witness the history of a new birth of the country.
          </p>
@@ -71,7 +30,7 @@ body, html {
 
         <div class="w3-quarter">
           <p class="w3-large"style="color: aliceblue; font-style:initial;" >Boulevard Riyadh City</p>
-          <p style="color: aliceblue; font-style:initial;"> 
+          <p style="color: rgb(255, 255, 255); font-style:initial;"> 
             The largest entertainment area in the capital city of Riyadh, with lots of virtual reality game experiences as well as international and local stores, in addition to numerous cultural theatres.
           </p>
         </div>
@@ -83,26 +42,47 @@ body, html {
 
       </div>
     </div>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="KingdomOfSaudiArabia\saudi_cites\static\images\a1.jpg" class="d-block w-100" alt="a1">
+
+{% endblock %}
+
+
+
+{% block Caro %}
+<div class="container my5">
+
+  <p style="background-color: rgb(126, 95, 135); text-align: center; font-size: larger;">This is some of Riyadh Pictures By me ^-^</p>
+  <div class="container-fluid" style="height: 100px;">
+  
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" >
+        <div class="carousel-item active" >
+          <img  class="d-block w-100"  src="{% static 'images\riyadh_pictures\2.jpg'%}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="KingdomOfSaudiArabia\saudi_cites\static\images\a1.jpg" class="d-block w-100" alt="a1">
+          <img  class="d-block w-100"src="{% static 'images\riyadh_pictures\3.jpg'%}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="KingdomOfSaudiArabia\saudi_cites\static\images\a1.jpg" class="d-block w-100" alt="a1">
+          <img class="d-block w-100" src="{% static 'images\riyadh_pictures\4.png'%}" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-</body>
-</html>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,14 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+  
 <head>
 <title> {% block title %}Kingdom Of Saudi Arabia{% endblock %} </title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -20,21 +25,43 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("/KingdomOfSaudiArabia/saudi_cites/static/images/backgroung.jpg");
-  min-height: 100%; }
+  {% block bg %}
+  background-image: url("{% static 'images/backgroung.jpg' %}");
+  {% endblock %}
+  min-height: 100vh; }
 .w3-bar .w3-button {padding: 16px;}
+
+
+
+
+.light {
+
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+
+.carousel-inner {
+  max-height: 500px;
+  img {
+    max-height: 500px;
+  }
+}
+
+.carousel-indicators img {
+  max-width: 100px;
+}
+
 </style>
 </head>
 
-
-
-<body>
-      <div id="content" name="content">
-        
     
     <!-- Navbar (sit on top) -->
     <div>
-      <nav class="navbar" style="background-color: #020e16;">
+      {% block Nav%} <nav class="navbar" style="background-color:  #020e16; ">{% endblock %}
         <a href="{% url 'saudi_cites:home_page' %}" class="w3-bar-item w3-button" style="color: aliceblue; font-style:initial;"  >Home</a>
         <a href=" {% url 'saudi_cites:riyadh' %} " class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Riyadh City</a>
         <a href=" {% url 'saudi_cites:tabuk' %} " class="w3-bar-item w3-button" style="color: aliceblue; font-style:inherit;"> Tabuk City</a>
@@ -43,11 +70,57 @@ body, html {
     </div>
 
 
+
+
+    
+
+    <body class="{{ request.COOKIES.mode }}" >
+      <div class="container-fluid p-3">
+          <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+
+      <body class="{{request.COOKIES.mode}}">
+            <div id="content" name="content">
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <a href="{% url 'saudi_cites:mode_dark' %}" class="btn {% if request.COOKIES.mode == 'dark'%} btn-primary {% else %} btn-secondary {% endif %}">Dark</a>
+        <a href="{% url 'saudi_cites:mode_light' %}" class="btn {% if request.COOKIES.mode == 'light'%} btn-primary {% else %} btn-secondary {% endif %}">Light</a>
+      </div>
+
+
+
+
+    <!-- new light mode controller 
+
+      
+    <div class="d-flex">
+      <div class="form-check form-switch ms-auto mt-3 me-3">
+        <label class="form-check-label ms-3" for="lightSwitch">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+            <path d="M811a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+          </svg>
+        </label>
+        <input class="form-check-input" type="checkbox" id="lightSwitch">
+      </div>
+    </div>
+
+    new light mode controller -->
+
+
+
+
+
+
+
+
+
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
       <div class="w3-display-left w3-text-white" style="padding:48px">
-        <div class="w3-jumbo w3-hide-small w3-center" style="margin:auto;" >Welcom to Saudi Arabia </div><br>
-        <div class="animate__animated animate__fadeInTopRight" >This is your guide for tourism in the Kingdom of Saudi Arabia</div>
+        <div class="w3-jumbo w3-hide-small w3-center" style="margin:auto;" > {% block headrGreeting %} Welcome To Saudi Ararbia  {% endblock %} </div><br>
+        <div class="animate__animated animate__fadeInTopRight" > {% block headrGreeting2 %}This is your guide for tourism in the Kingdom of Saudi Arabia {% endblock %}  </div>
         <p><div class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" style="text-decoration: double;"  p>Let's Have a look on This Great country</div></p>
       </div> 
     </header>
@@ -82,6 +155,11 @@ body, html {
       </div>
     </div>
   {% endblock %}
+
+  {% block Caro %}
+  {% endblock %}
+
+
 <script>
 // Modal Image Gallery
 function onClick(element) {
@@ -107,6 +185,6 @@ function w3_close() {
 }
 </script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
